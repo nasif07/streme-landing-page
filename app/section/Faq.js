@@ -10,9 +10,9 @@ const Faq = () => {
     };
     return (
         <div className="bg-[#101010]">
-            <div className="max-w-[1400px] mx-auto flex  py-[50px] md:py-[150px]">
+            <div className="max-w-[1400px] px-2 mx-auto lg:flex  py-[50px] md:py-[150px] md:px-10 ">
                 <div className="">
-                    <h1 className="text-3xl md:text-5xl text-center md:text-left font-bold text-white pl-2 md:pl-16 lg:pl-0 lg:max-w-[400px]">Frequently Asked Questions</h1>
+                    <h1 className="text-3xl md:text-5xl text-center md:text-left font-bold text-white pl-2 md:pl-16 lg:pl-0 lg:max-w-[400px] pb-10">Frequently Asked Questions</h1>
                 </div>
                 <div className="">
 
@@ -33,6 +33,7 @@ const Faq = () => {
 
                 </div>
             </div>
+            <div className="bg-[#1D1D1D] h-3"></div>
         </div>
     );
 };

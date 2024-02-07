@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Packages from "@/app/section/Packages";
 import { useState } from "react";
 import Faq from "./section/Faq";
+import Review from "./section/Review";
+import Footer from "./section/Footer";
 
 
 
@@ -14,15 +16,18 @@ export default function Home() {
   const nextSlider = () => setCurrentSlider((currentSlider) => (currentSlider === sliders.length - 1 ? 0 : currentSlider + 1));
   return (
     <main className="">
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
+
       <div style={{
         backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://i.ibb.co/m8KT5fz/hero-bg.jpg)",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        maxHeight: "100vh"
       }}>
+        <Navbar></Navbar>
         <div className="  h-[100vh] px-3  flex flex-col lg:flex-row items-center justify-center overflow-hidden gap-5 lg:gap-10  max-w-[1400px] mx-auto">
           {/* <div className="bg-[#f3f9fc] w-full absolute left-0 h-[100vh] lg:h-[100vh] -z-40"></div> */}
-          <div className="w-2/3 lg:w-2/4 text-center lg:text-left space-y-2 lg:space-y-5 lg:py-5 pt-16">
+          <div className="w-2/3 lg:w-2/4 lg:mb-16 text-center lg:text-left space-y-2 lg:space-y-5 lg:py-5 pt-16">
             <h1 className="text-lg md:text-4xl pt-4 md:pt-0 text-white lg:text-[40px] font-bold">Watch latest movies, TV shows, and more...</h1>
             <p className="text-[#616161] text-xs md:text-lg">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
             <button className="font-bold py-2 xl:py-3 text-xs md:text-base lg:text-lg xl:text-xl hover:scale-95 duration-300 px-4 lg:px-10 text-white bg-[#00b84b]">Explore More</button>
@@ -50,8 +55,10 @@ export default function Home() {
 
       <Packages></Packages>
       <Faq></Faq>
+      <Review></Review>
+      <Footer></Footer>
 
-      
+
     </main>
   );
 }
